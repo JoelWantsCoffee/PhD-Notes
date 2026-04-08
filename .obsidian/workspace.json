@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Associated Graded.md",
+                "file": "Expansions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Associated Graded"
+              "title": "Expansions"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "3426b6e4085c5261",
@@ -171,9 +172,10 @@
   },
   "active": "1e7806614811d8cf",
   "lastOpenFiles": [
-    "Strict morphisms.md",
-    "Filtrations.md",
     "Associated Graded.md",
+    "Filtrations.md",
+    "Expansions.md",
+    "Strict morphisms.md",
     "Readme..md",
     "().md"
   ]

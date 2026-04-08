@@ -18,3 +18,5 @@ $$(\mathrm{coker}(\mathrm{ind}f))_i = \mathrm{coker}((\mathrm{ind}f)_i)$$
 ***proof.*** It suffices to show that $\mathrm{coker} f' \cong \mathrm{im}(\mathrm{coker}(f)g)$ given any pullback diagram:
 <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwxLCJZIl0sWzEsMSwiWiJdLFsxLDAsIlAiXSxbMCwwLCJYIl0sWzEsMCwiZyJdLFszLDAsImYiLDJdLFsyLDMsImcnIiwyXSxbMiwxLCJmJyJdLFsyLDAsIiIsMSx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dXQ==&embed" width="700" height="200" style="border-radius: 8px; border: none; filter: invert(1);"></iframe>
 This isomorphism follows from the up-to-isomorphism uniqueness of of epi-mono factorisations and the fact that the unique map $h : \mathrm{coker}(f') \to  \mathrm{coker}(f)$ is mono. I'm not actually sure if this latter statement is true – I haven't been able to prove it. I appeal to [stack exchange](https://math.stackexchange.com/questions/1827766/any-straightforward-proof-of-in-an-abelian-category-a-pullback-yields-a-monomo).
+# Categorical Properties
+The category of fi

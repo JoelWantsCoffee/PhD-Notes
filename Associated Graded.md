@@ -1,0 +1,40 @@
+	# Definition.
+Fix an abelian category $\newcommand{\A}{\mathcal{A}}\A$, and define the associated graded functor $\gr : \mathsf{Filt}(\mathcal{A}) \to \mathsf{Filt}(\mathcal{A})$ as follows. First, on objects:
+$$ 
+\newcommand{\gr}{\mathrm{gr}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\N}{\mathbb{N}}
+\gr : \Big(A_n \xleftarrow{\;a_n\;} A_{n+1}\Big)_{n \in \N} \longmapsto \Big(\bigoplus_{i \geq n} \coker a_i \;\xhookleftarrow{\quad} \bigoplus_{i \geq n + 1} \coker a_i \Big)_{n \in \N}$$
+And on morphisms:
+$$
+\gr : \Big(A_n \xrightarrow{\;f_n\;} B_n \Big)_{n \in \N} \longmapsto \Big(\bigoplus_{i \geq n} \coker_{\mathrm{mor}} f_i \Big)_{n \in \N}
+$$
+We're really doing a composition:
+$$
+\mathsf{Filt}(\A) \longrightarrow \A^\N \,\xrightarrow{\coker} \,\A^\N\, \xrightarrow{\;\oplus\;} \mathsf{Filt}(\A)
+$$
+***lemma.*** The associated graded functor $\gr$ is idempotent.
+***proof.***
+$$
+\begin{align*}
+	(\gr \gr X_\bullet)_n &= \bigoplus_{i \geq n} \big(\gr X_\bullet\big)_i / \big(\gr X_\bullet\big)_{i+1}\\
+	&= \bigoplus_{i \geq n} \left( \Big(\bigoplus_{j \geq i} X_j/X_{j+1}\Big) / \Big(\bigoplus_{j \geq i + 1} X_j/X_{j+1}\Big) \right)\\
+	&= \bigoplus_{i \geq n} X_i / X_{i+1}\\
+	&= (gr X_\bullet)_n
+\end{align*}
+$$
+the morphisms work out too.
+***lemma.*** If $f_\bullet : A_\bullet \to B_\bullet$ is strict, then $\mathrm{ker}\,\gr_\mathrm{mor} f = \gr_\mathrm{mor}\,\mathrm{ker} f$ and $\mathrm{coker}\,\gr_\mathrm{mor} f = \gr_\mathrm{mor}\,\mathrm{coker} f$.
+***proof.*** The [stacks projects](https://stacks.math.columbia.edu/tag/0127) proves this (1 implies 6 in the statement linked). The following is an alternate proof. First, suppose $Y_\bullet \in \mathsf{Filt}(\A)$, and $f : X \hookrightarrow Y_0$. Form the induced filtration on $X_0$, and quotient filtration on $\mathrm{coker} f$ (by the lemma, the quotient filtration is the component-wise cokernel of the induced filtration). Applying the snake lemma (highlighted arrows) to each component our filtration morphisms (middle square of the following diagram), we find each 
+$$0 \to \gr_i X \xrightarrow{\;\,\gr_i f\;\,} \gr_i Y \xrightarrow{\gr_i \coker f} \gr_i \coker f \to 0$$
+is exact.
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTQsWzIsMSwiWF9pIl0sWzIsMiwiWV9pIl0sWzIsMywiXFxvcGVyYXRvcm5hbWV7Y29rZXJ9IGZfaSJdLFs0LDEsIlhfe2krMX0iXSxbNCwyLCJZX3tpKzF9Il0sWzQsMywiXFxvcGVyYXRvcm5hbWV7Y29rZXJ9IGZfe2krMX0iXSxbMCwyLCJcXG9wZXJhdG9ybmFtZXtjb2tlcn0geV9pIl0sWzAsMywiXFxvcGVyYXRvcm5hbWV7Y29rZXJ9IGNfaSJdLFswLDEsIlxcb3BlcmF0b3JuYW1le2Nva2VyfSB4X2kiXSxbNiwxLCJcXGtlciB4X2kiXSxbNiwyLCJcXGtlciB5X2kiXSxbNiwzLCJcXGtlciBjX2kiXSxbMiw0LCJcXG9wZXJhdG9ybmFtZXtjb2tlcn0gcV9pIl0sWzQsMCwiXFxrZXIgZl97aSsxfSJdLFswLDEsImZfaSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsMiwicV9pIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzQsMSwieV9pIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFszLDAsInhfaSIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzMsNCwiZl97aSsxfSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzQsNSwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzUsMiwiY19pIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFs2LDcsIlxcbWF0aHJte2dyfV9pIHEiLDIseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6ImVwaSJ9fX0sWzAsNjAsNjAsMV1dLFsxLDYsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsyLDcsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFswLDgsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs4LDYsIlxcbWF0aHJte2dyfV9pIGYiLDIseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19LFswLDYwLDYwLDFdXSxbOSwxMCwiIiwwLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEwLDExLCIiLDAseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzksMywiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsxMCw0LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzExLDUsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMiwxMiwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzcsMTIsIiIsMCx7ImNvbG91ciI6WzAsNjAsNjBdfV0sWzEzLDNdLFsxMyw5LCIiLDAseyJjb2xvdXIiOlswLDYwLDYwXX1dLFsxMSw4LCIiLDEseyJjdXJ2ZSI6LTEsImNvbG91ciI6WzAsNjAsNjBdfV0sWzMsMTYsIiIsMSx7ImxldmVsIjoxLCJzdHlsZSI6eyJuYW1lIjoiY29ybmVyIn19XV0=&embed" width="700" height="400" style="border-radius: 8px; border: none; filter: invert(1);"></iframe>
+Taking $(X = \ker f, Y = A)$ and $(X = \mathrm{im} f, Y = B)$, and noting $(\mathrm{im} f)_i = \mathrm{im}(f_i)$ only because $f$ is strict, we find two exact sequences. Recall $\coker\mathrm{im} f_i \cong \coker f_i$ because $\A$ is abelian.
+$$
+0 \to \gr_i \ker f \to \gr_i A \to \gr_i \mathrm{coim} f,\quad\quad \gr_i \mathrm{im} f \to \gr_i Y \to \gr_i \coker f \to 0
+$$
+Because $\gr$ is a functor, it preserve isomorphisms – so $\gr_i \mathrm{coim} f \cong \gr_i \mathrm{im} f$ and we can glue these sequences together. Composing the middle terms, we find the following exact sequence, which is exactly the desired result.
+$$
+0 \to \gr_i \ker f \to \gr_i A \to \gr_i Y \to \gr_i \coker f \to 0
+% there's also the following quiver link. https://q.uiver.app/#q=WzAsMTcsWzYsMiwiQV97aSsxfSJdLFs0LDIsIkFfaSJdLFs2LDQsIkJfe2krMX0iXSxbNCw0LCJCX2kiXSxbMiw0LCJcXG9wZXJhdG9ybmFtZXtjb2tlcn0gYl9pIl0sWzIsMiwiXFxvcGVyYXRvcm5hbWV7Y29rZXJ9IGFfaSJdLFs0LDAsIlxca2VyIGZfaSJdLFs2LDAsIlxca2VyIGZfe2krMX0iXSxbMiwwLCJcXG9wZXJhdG9ybmFtZXtjb2tlcn0ga19pIl0sWzAsMiwiXFxrZXIgZ3JfaSBmIl0sWzUsMSwiXFxrZXIgZl9pIl0sWzUsMywiZl9pIl0sWzQsNiwiXFxvcGVyYXRvcm5hbWV7Y29rZXJ9IGZfaSJdLFs2LDYsIlxcb3BlcmF0b3JuYW1le2Nva2VyfSBmX3tpKzF9Il0sWzIsNiwiXFxvcGVyYXRvcm5hbWV7Y29rZXJ9IGNfaSJdLFswLDQsIlxcb3BlcmF0b3JuYW1le2Nva2VyfSBcXGdyX2kgZiJdLFs1LDUsIlxcb3BlcmF0b3JuYW1le2Nva2VyfSBmX2kiXSxbMCwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzIsMywiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsxLDNdLFszLDQsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDUsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs3LDAsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbNyw2LCJrX2kiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs2LDgsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs5LDUsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMTEsMTAsIlxca2VyIiwxLHsibGFiZWxfcG9zaXRpb24iOjMwLCJsZXZlbCI6Mn1dLFs4LDUsIlxcZ3JfaSBcXGtlciBmIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNiwxLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzgsOSwiIiwyLHsiY3VydmUiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs3LDEsIiIsMCx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dLFszLDEyLCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMiwxMywiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzUsNCwiXFxncl9pIGYiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMTMsMTIsImNfaSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEyLDE0LCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNCwxNSwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzE1LDE0LCIiLDEseyJjdXJ2ZSI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzExLDE2LCJcXG1hdGhybXtjb2tlcn0iLDEseyJsYWJlbF9wb3NpdGlvbiI6MzAsImxldmVsIjoyfV0sWzAsMl0sWzQsMTQsIlxcZ3JfaSBcXG9wZXJhdG9ybmFtZXtjb2tlcn0gZiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMTAsMjcsIlxcZ3JfaSIsMSx7ImxhYmVsX3Bvc2l0aW9uIjo2MH1dLFszMywyNSwiXFxrZXIiLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9fV0sWzMzLDM2LCJcXG1hdGhybXtjb2tlcn0iLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9fV0sWzExLDMzLCJcXGdyX2kiLDEseyJsYWJlbF9wb3NpdGlvbiI6NjB9XSxbMTYsNDAsIlxcZ3JfaSIsMSx7ImxhYmVsX3Bvc2l0aW9uIjo2MH1dXQ
+$$
