@@ -2,5 +2,11 @@
   "accentColor": "",
   "enabledCssSnippets": [
     "invert-quiver"
-  ]
+  ],
+  "showRibbon": false,
+  "showViewHeader": false,
+  "translucency": true,
+  "cssTheme": "",
+  "theme": "system",
+  "baseFontSize": 16
 }

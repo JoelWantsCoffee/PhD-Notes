@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Filtrations.md",
+                "file": "Associated Graded.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Filtrations"
+              "title": "Associated Graded"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 258.5
   },
   "right": {
     "id": "3426b6e4085c5261",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Filtrations.md",
+                "file": "Associated Graded.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Filtrations"
+              "title": "Backlinks for Associated Graded"
             }
           },
           {
@@ -166,15 +166,23 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian42-brat:BRAT": false
     }
   },
   "active": "150338ea6ee118cf",
   "lastOpenFiles": [
-    "Strict morphisms.md",
-    "Expansions.md",
+    "Additive Categories.md",
     "Associated Graded.md",
+    "Expansions.md",
     "Filtrations.md",
+    "Goldman-Turaev.md",
+    "Strict morphisms.md",
+    "Untitled.md",
+    "Pasted image 20260416092453.png",
+    "Pasted image 20260415100556.png",
+    "todo.md",
+    "2026-04-14.md",
     "invert.css",
     "Untitled.base",
     "Readme..md",

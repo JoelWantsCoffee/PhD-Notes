@@ -1,7 +1,5 @@
-# Definition.
-Fix an abelian category $\def\A{\mathcal{A}}\A$, and define the associated graded functor $\gr : \mathsf{Filt}(\mathcal{A}) \to \mathsf{Filt}(\mathcal{A})$ as follows. First, on objects:
+Fix an abelian category $\def\A{\mathscr{A}}\A$, and define the associated graded functor $\def\gr{\mathrm{gr}}\gr : \mathsf{Filt}(\mathcal{A}) \to \mathsf{Filt}(\mathcal{A})$ as follows. First, on objects:
 $$ 
-\def\gr{\mathrm{gr}}
 \def\coker{\operatorname{coker}}
 \def\N{\mathbb{N}}
 \gr : \Big(A_n \xleftarrow{\;a_n\;} A_{n+1}\Big)_{n \in \N} \longmapsto \Big(\bigoplus_{i \geq n} \coker a_i \;\xhookleftarrow{\quad} \bigoplus_{i \geq n + 1} \coker a_i \Big)_{n \in \N}$$
@@ -13,7 +11,9 @@ We're really doing a composition:
 $$
 \mathsf{Filt}(\A) \longrightarrow \A^\N \,\xrightarrow{\coker} \,\A^\N\, \xrightarrow{\;\oplus\;} \mathsf{Filt}(\A)
 $$
-***lemma.*** The associated graded functor $\gr$ is idempotent.
+> [!info] lemma. 
+> The associated graded functor $\gr$ is idempotent.
+
 ***proof.***
 $$
 \begin{align*}
@@ -24,7 +24,10 @@ $$
 \end{align*}
 $$
 the morphisms work out too.
-***lemma.*** If $f_\bullet : A_\bullet \to B_\bullet$ is strict, then $\mathrm{ker}\,\gr_\mathrm{mor} f = \gr_\mathrm{mor}\,\mathrm{ker} f$ and $\mathrm{coker}\,\gr_\mathrm{mor} f = \gr_\mathrm{mor}\,\mathrm{coker} f$.
+
+> [!info] lemma. 
+> If $f_\bullet : A_\bullet \to B_\bullet$ is strict, then $\mathrm{ker}\,\gr_\mathrm{mor} f = \gr_\mathrm{mor}\,\mathrm{ker} f$ and $\mathrm{coker}\,\gr_\mathrm{mor} f = \gr_\mathrm{mor}\,\mathrm{coker} f$.
+
 ***proof.*** The [stacks projects](https://stacks.math.columbia.edu/tag/0127) proves this (1 implies 6 in the statement linked). The following is an alternate proof. First, suppose $Y_\bullet \in \mathsf{Filt}(\A)$, and $f : X \hookrightarrow Y_0$. Form the induced filtration on $X_0$, and quotient filtration on $\mathrm{coker} f$ (by the lemma, the quotient filtration is the component-wise cokernel of the induced filtration). Applying the snake lemma (highlighted arrows) to each component our filtration morphisms (middle square of the following diagram), we find each 
 $$0 \to \gr_i X \xrightarrow{\;\,\gr_i f\;\,} \gr_i Y \xrightarrow{\gr_i \coker f} \gr_i \coker f \to 0$$
 is exact.
@@ -38,3 +41,5 @@ $$
 0 \to \gr_i \ker f \to \gr_i A \to \gr_i Y \to \gr_i \coker f \to 0
 % there's also the following quiver link. https://q.uiver.app/#q=WzAsMTcsWzYsMiwiQV97aSsxfSJdLFs0LDIsIkFfaSJdLFs2LDQsIkJfe2krMX0iXSxbNCw0LCJCX2kiXSxbMiw0LCJcXG9wZXJhdG9ybmFtZXtjb2tlcn0gYl9pIl0sWzIsMiwiXFxvcGVyYXRvcm5hbWV7Y29rZXJ9IGFfaSJdLFs0LDAsIlxca2VyIGZfaSJdLFs2LDAsIlxca2VyIGZfe2krMX0iXSxbMiwwLCJcXG9wZXJhdG9ybmFtZXtjb2tlcn0ga19pIl0sWzAsMiwiXFxrZXIgZ3JfaSBmIl0sWzUsMSwiXFxrZXIgZl9pIl0sWzUsMywiZl9pIl0sWzQsNiwiXFxvcGVyYXRvcm5hbWV7Y29rZXJ9IGZfaSJdLFs2LDYsIlxcb3BlcmF0b3JuYW1le2Nva2VyfSBmX3tpKzF9Il0sWzIsNiwiXFxvcGVyYXRvcm5hbWV7Y29rZXJ9IGNfaSJdLFswLDQsIlxcb3BlcmF0b3JuYW1le2Nva2VyfSBcXGdyX2kgZiJdLFs1LDUsIlxcb3BlcmF0b3JuYW1le2Nva2VyfSBmX2kiXSxbMCwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzIsMywiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsxLDNdLFszLDQsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDUsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs3LDAsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbNyw2LCJrX2kiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs2LDgsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs5LDUsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMTEsMTAsIlxca2VyIiwxLHsibGFiZWxfcG9zaXRpb24iOjMwLCJsZXZlbCI6Mn1dLFs4LDUsIlxcZ3JfaSBcXGtlciBmIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNiwxLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzgsOSwiIiwyLHsiY3VydmUiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs3LDEsIiIsMCx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dLFszLDEyLCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMiwxMywiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzUsNCwiXFxncl9pIGYiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMTMsMTIsImNfaSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEyLDE0LCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNCwxNSwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzE1LDE0LCIiLDEseyJjdXJ2ZSI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzExLDE2LCJcXG1hdGhybXtjb2tlcn0iLDEseyJsYWJlbF9wb3NpdGlvbiI6MzAsImxldmVsIjoyfV0sWzAsMl0sWzQsMTQsIlxcZ3JfaSBcXG9wZXJhdG9ybmFtZXtjb2tlcn0gZiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMTAsMjcsIlxcZ3JfaSIsMSx7ImxhYmVsX3Bvc2l0aW9uIjo2MH1dLFszMywyNSwiXFxrZXIiLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9fV0sWzMzLDM2LCJcXG1hdGhybXtjb2tlcn0iLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9fV0sWzExLDMzLCJcXGdyX2kiLDEseyJsYWJlbF9wb3NpdGlvbiI6NjB9XSxbMTYsNDAsIlxcZ3JfaSIsMSx7ImxhYmVsX3Bvc2l0aW9uIjo2MH1dXQ
 $$
+
+***Lemma.*** $\gr$ is additive.
