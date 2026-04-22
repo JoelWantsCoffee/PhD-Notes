@@ -1,6 +1,6 @@
 Suppose $T : \mathscr{C} \to \mathscr{C}$ is an idempotent endofunctor, with $\mu : T^2 \xrightarrow{\;\cong\;} T$. 
 
-> [!quote]
+> [!def]
 > An expansion of $T$ is an object $A \in \mathscr{C}$ together with a morphism $a : A \to TA$ such that $\mu \circ Ta = 1$. Expansions of $T$ form a category, $\mathsf{Exp}(T)$, which is a full subcategory of $T$-coalgebras. 
 
 Denote the forgetful functor as follows.

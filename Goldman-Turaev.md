@@ -12,12 +12,30 @@ Now, let  $D_p$ the $p$-punctured disk and $\C : \mathsf{Grp} \to \mathsf{Alg}_\
 \mathcal{I} = \langle \gamma - 1 \,|\, \gamma \in \pi \rangle = \ker U(\epsilon:\C\pi \to \C)\\[2mm]
 U \C \pi \hookleftarrow \mathcal{I} \hookleftarrow \mathcal{I}^2 \hookleftarrow \cdots
 \end{gather*}
-$$where $\mathcal{I}^n = \mathrm{im}( I^{\otimes n} \hookrightarrow UC\pi^{\otimes n} \xrightarrow{U\mu} UC\pi )$. But this is a filtration on $U\C\pi$, that is, a diagram of the following form.
-<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNSxbMCwwLCJVQV8wIl0sWzEsMCwiVUFfMSJdLFsyLDAsIlVBXzIiXSxbMywwLCJcXGNkb3RzIl0sWzAsMSwifEF8Il0sWzEsMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsyLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMywyLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzAsNCwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV1d&embed" width="100%" height="200" style="border-radius: 8px; border: none;"></iframe>
-We conclude by taking the quotient filtration on $|A|$.
+$$Where $\mathcal{I}^n = \mathrm{im}( U\mathcal{I}^{\otimes n} \xrightarrow{\mu^{n-1}} U\mathcal{I} )$, with $\mu : \mathcal{I}^2 \to \mathcal{I}$ obtained by viewing the forgetful functor as a composition, $U : \mathsf{Alg}_\C \xrightarrow{v} \mathsf{SAlg}_\C \xrightarrow{u} \mathsf{Vect}_\C$. Since $\mathsf{SAlg}_\C$ (semi or non-unital algebras) has a zero object, we can take $\ker v\epsilon$, which has a multiplication. Noting $(\ker U\epsilon) = u(\ker v\epsilon)$ we have the desired map.
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNSxbMCwwLCJVXFxtYXRoY2Fse0l9XntcXG90aW1lcyBufSJdLFsxLDEsIlVcXG1hdGhjYWx7SX0iXSxbMiwwLCJVXFxtYXRoY2Fse0l9XntcXG90aW1lcyBuKzF9Il0sWzIsMiwiXFxtYXRocm17aW19IFxcbXVee259Il0sWzAsMiwiXFxtYXRocm17aW19IFxcbXVee24tMX0iXSxbMCwxLCJcXG11XntuLTF9IiwxXSxbMiwzLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMyw0LCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDAsIlxcbXUgXFxvdGltZXMgMSIsMl0sWzAsNCwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzQsMSwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsyLDEsIlxcbXVee259IiwxXSxbMywxLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV1d&embed" width="100%" height="200" style="border-radius: 8px; border: none;"></iframe>
+But this is a filtration on $U\C\pi$, that is, a diagram of the following form.
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNSxbMCwwLCJVIFxcbWF0aGJie0N9IFxccGkiXSxbMSwwLCJcXG1hdGhjYWx7SX0iXSxbMiwwLCJcXG1hdGhjYWx7SX1eMiJdLFszLDAsIlxcY2RvdHMiXSxbMCwxLCJcXG92ZXJsaW5le3xcXG1hdGhiYntDfVxccGl8fSJdLFsxLDAsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMiwxLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzMsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFswLDQsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dXQ==&embed" width="100%" height="200" style="border-radius: 8px; border: none;"></iframe>
+We conclude by taking the quotient filtration on $|\C\pi|$. From here on, we write $\C\pi$ for $U\C\pi$.
 
-> [!info] lemma.
+> [!lemma]
 > The map $$ \begin{align*}
-\mu(a \otimes b) = -\sum_{q \in a \cap b} \varepsilon_q|a_qb_q|\end{align*}$$
-is a lie bracket on $|\C\pi|$
+> \mu(a \otimes b) = -\sum_{q \in a \cap b} \varepsilon_q|a_qb_q|\end{align*}$$
+> is a lie bracket on $|\C\pi|$
+
+Define the self intersection map as follows,
+$$
+\begin{align*}
+\chi : \C\pi &\to |\C\pi| \otimes \C\pi\\
+\gamma &\mapsto - \sum_{p \in \tilde \gamma \cap \tilde \gamma} \varepsilon_p |\tilde \gamma_{t_1^pt_2^p}| \otimes \tilde\gamma_{0t_1^p}\tilde\gamma_{t_2^p1}
+\end{align*}
+$$
+and the projection inclusion map as the composition
+$$
+p : \C\pi \twoheadrightarrow |\C\pi| \hookrightarrow |\C\pi| \otimes \C\pi\\
+$$
+> [!lemma]
+> The unique map $\delta$, coming from the universal property of cokernel $\C\pi \twoheadrightarrow |\C\pi|$,
+> <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNixbMCwwLCJcXG1hdGhiYntDfVxccGkiXSxbMiwwLCJ8XFxtYXRoYmJ7Q31cXHBpfCBcXG90aW1lcyBcXG1hdGhiYntDfVxccGkiXSxbNCwwLCJ8XFxtYXRoYmJ7Q31cXHBpfCBcXG90aW1lcyB8XFxtYXRoYmJ7Q31cXHBpfCJdLFs0LDEsInxcXG1hdGhiYntDfVxccGl8IFxcbGFuZCB8XFxtYXRoYmJ7Q31cXHBpfCJdLFswLDIsInxcXG1hdGhiYntDfVxccGl8Il0sWzQsMiwifFxcbWF0aGJie0N9XFxwaXwgXFxvdGltZXMgfFxcbWF0aGJie0N9XFxwaXwiXSxbMCwxLCJwK1xcY2hpIl0sWzEsMiwiMSBcXG90aW1lcyB8XFxjZG90fCJdLFsyLDMsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFswLDQsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs0LDUsIlxcZGVsdGEiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw1LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV1d&embed" width="100%" height="200" style="border-radius: 8px; border: none;"></iframe>
+> is a lie cobracket.
 
