@@ -1,0 +1,7 @@
+> [!def]
+> The braid group $B_m$ on $m \geq 2$ strings, is given as follows.
+$$ B_m = \Bigg\langle \sigma_1,\,\sigma_2,\ldots,\sigma_{m-1} \;\Bigg|\; \begin{matrix} \sigma_i\sigma_j = \sigma_j\sigma_i & \text{ for }\,|i-j|>1\,\\ \sigma_i\sigma_{i+1}\sigma_i =\sigma_{i+1}\sigma_i\sigma_{i+1} & \text{ for } i \in [m-2] \end{matrix} \, \Bigg\rangle $$
+
+Pure braids are normal subgroup of braids, they have a kinda awful presentation. Braid groups in a handlebody of genus $g$ have the following presentation.
+$$ B_{g,n} = \Bigg\langle \begin{matrix} \tau_1,\ldots,\tau_g\\\sigma_{1},\ldots,\sigma_{n-1}\end{matrix} \;\Bigg|\; \begin{matrix} \sigma_i\sigma_j = \sigma_j\sigma_i & \text{ for }\,|i-j|>1\,\\ \sigma_i\sigma_{i+1}\sigma_i =\sigma_{i+1}\sigma_i\sigma_{i+1} & \text{ for } i \in [m-2]\\\tau_k\sigma_i =\sigma_i\tau_k & \text{ for } 1<i< m\\\tau_k\sigma_1\tau_k\sigma_1 =\sigma_1\tau_k\sigma_{1}\tau_k & k \in [g]\\ \tau_k\sigma_1^{-1}\tau_{l}\sigma_1 =\sigma_1^{-1}\tau_{l}\sigma_{1}\tau_k & 1 \leq k < l \leq g\end{matrix} \,\Bigg\rangle $$
+Which is a bit gross, but it's really just the subgroup of $B_{g + n}$ where the first $g$ strings are unbraided (relative to each other). In this presentation $\tau_k$ means wrapping the the first strand around the $k^{\mathrm{th}}$ pole/doughnut hole.  

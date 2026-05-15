@@ -19,9 +19,9 @@ But this is a filtration on $U\C\pi$, that is, a diagram of the following form.
 We conclude by taking the quotient filtration on $|\C\pi|$. From here on, we write $\C\pi$ for $U\C\pi$.
 
 > [!lemma]
-> The map $$ \begin{align*}
+> The map $\mu : |\C\pi| \otimes |\C\pi| \to |\C\pi|$ $$ \begin{align*}
 > \mu(a \otimes b) = -\sum_{q \in a \cap b} \varepsilon_q|a_qb_q|\end{align*}$$
-> is a lie bracket on $|\C\pi|$
+> is a lie bracket on $|\C\pi|$.
 
 Define the self intersection map as follows,
 $$
@@ -32,10 +32,10 @@ $$
 $$
 and the projection inclusion map as the composition
 $$
-p : \C\pi \twoheadrightarrow |\C\pi| \hookrightarrow |\C\pi| \otimes \C\pi\\
+p : \C\pi \xhookrightarrow{U\iota}  \C\pi \otimes \C\pi \xtwoheadrightarrow{\pi\otimes 1} |\C\pi| \otimes \C\pi\\
 $$
 > [!lemma]
-> The unique map $\delta$, coming from the universal property of cokernel $\C\pi \twoheadrightarrow |\C\pi|$,
+> The unique map $\delta$ from the universal property of cokernel $\C\pi \twoheadrightarrow |\C\pi|$,
 > <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNixbMCwwLCJcXG1hdGhiYntDfVxccGkiXSxbMiwwLCJ8XFxtYXRoYmJ7Q31cXHBpfCBcXG90aW1lcyBcXG1hdGhiYntDfVxccGkiXSxbNCwwLCJ8XFxtYXRoYmJ7Q31cXHBpfCBcXG90aW1lcyB8XFxtYXRoYmJ7Q31cXHBpfCJdLFs0LDEsInxcXG1hdGhiYntDfVxccGl8IFxcbGFuZCB8XFxtYXRoYmJ7Q31cXHBpfCJdLFswLDIsInxcXG1hdGhiYntDfVxccGl8Il0sWzQsMiwifFxcbWF0aGJie0N9XFxwaXwgXFxvdGltZXMgfFxcbWF0aGJie0N9XFxwaXwiXSxbMCwxLCJwK1xcY2hpIl0sWzEsMiwiMSBcXG90aW1lcyB8XFxjZG90fCJdLFsyLDMsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFswLDQsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs0LDUsIlxcZGVsdGEiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw1LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV1d&embed" width="100%" height="200" style="border-radius: 8px; border: none;"></iframe>
 > is a lie cobracket.
 
