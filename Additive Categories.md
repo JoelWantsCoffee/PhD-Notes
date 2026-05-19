@@ -5,5 +5,5 @@ An additive category is called preabelian if it has all kernels and cokernels.
 
 ***Lemma.*** If $\A$ is preabelian, then (co)kernel is an additive functor $\Mor(\A)$.
 
-***Lemma.*** The ker-coker sequence in a preab-cat $\A$ is exact if all the morphisms are strict. 
+***Lemma.*** The ker-coker sequence in a preab-cat $\A$ exists (and is exact) if all the morphisms are strict. 
 ***proof.*** See [this paper](https://doi.org/10.1007/BF02674106)

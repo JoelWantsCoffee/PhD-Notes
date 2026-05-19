@@ -20,6 +20,9 @@ $$
 \bigcup_{i + j = n} A_i \otimes B_j  \xhookleftarrow{ (1 \otimes b_0)\,\cup\, \bigcup_{k=0}^n (a_i \otimes 1) } \bigcup_{i + j = n+1} A_i \otimes B_j
 $$
 
+> [!lem]
+> An epi in $\mathsf{Filt}(\A)$ is a such that $f_0$ is an epi. A mono is map such that each $f_i$ is a mono.
+
 Now, given one object $A_\bullet \in \mathsf{Filt}(\A)$ and one object $B \in \A$. Consider the two constructions for a filtration on $B$. The stacks project gives special cases (mono-filtrations over vector spaces) of the following [here](https://stacks.math.columbia.edu/tag/0121).
 * ***The induced filtration***: Given $f : B \to A_0$, take $B_i$ to be the pullback of $f$ and $A_i \to A_0$.
 	* $I : \mathsf{Mor} \times_{\mathrm{cod}, U} \mathsf{Filt} \to \mathsf{Mor}\mathsf{Filt}$
@@ -39,3 +42,33 @@ We ought to compare these constructions (for filtrations), to those for mono-fil
 ***proof.*** It suffices to show that $\mathrm{coker} f' \cong \mathrm{im}(\mathrm{coker}(f)g)$ given any pullback diagram:
 <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwxLCJZIl0sWzEsMSwiWiJdLFsxLDAsIlAiXSxbMCwwLCJYIl0sWzEsMCwiZyJdLFszLDAsImYiLDJdLFsyLDMsImcnIiwyXSxbMiwxLCJmJyJdLFsyLDAsIiIsMSx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dXQ==&embed" width="100%" height="200" style="border-radius: 8px; border: none;"></iframe>
 This isomorphism follows from the up-to-isomorphism uniqueness of of epi-mono factorisations and the fact that the unique map $h : \mathrm{coker}(f') \to  \mathrm{coker}(f)$ is mono. I'm not actually sure if this latter statement is true – I haven't been able to prove it. I appeal to [stack exchange](https://math.stackexchange.com/questions/1827766/any-straightforward-proof-of-in-an-abelian-category-a-pullback-yields-a-monomo).
+### Pullbacks, Pushouts, and Monification
+
+> [!lem] 
+> Pullbacks in $\mathsf{Filt}(\A)$ are computed component-wise
+
+***proof.*** Observe.
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMjMsWzIsMSwiXFxidWxsZXQiXSxbMiwzLCJCXzEiXSxbMyw0LCJBXzEiXSxbMywyLCJDXzEiXSxbMCwxLCJcXGJ1bGxldCJdLFsxLDIsIkMiXSxbMCwzLCJCIl0sWzEsNCwiQSJdLFszLDAsIlxcYnVsbGV0Il0sWzUsMSwibXg9bXkiXSxbNSwyLCJwX0JteD1wX0JteSJdLFs1LDMsImJxX0J4PWJxX0J5Il0sWzUsNCwicV9CeD1xX0J5Il0sWzYsNCwicV9DeD1xX0N5Il0sWzYsMSwibXg9bXkiXSxbNiwyLCJwX0NteD1wX0NteSJdLFs2LDMsImNxX0N4PWNxX0N5Il0sWzQsMiwiXFxjZG90cyJdLFs0LDQsIlxcY2RvdHMiXSxbMywzLCJcXGNkb3RzIl0sWzUsMCwiXFx0ZXh0e3Byb29mIH1tXFx0ZXh0eyBpcyBtb25vLn0iXSxbNyw0LCJcXHRleHR7YXBwbHkgam9pbnQgbW9uby1uZXNzLn0iXSxbNywxLCJcXHRleHR7KGRlZil9Il0sWzUsN10sWzYsN10sWzIsNywiYSIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMSwyXSxbMywyXSxbMCwxLCJxX0IiLDEseyJsYWJlbF9wb3NpdGlvbiI6NzAsImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzMsNSwiYyIsMSx7ImxhYmVsX3Bvc2l0aW9uIjozMCwiY29sb3VyIjpbMTIwLDYwLDYwXSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX0sWzEyMCw2MCw2MCwxXV0sWzAsMywicV9DIiwxLHsiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzQsNSwicF9DIiwxLHsiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzEsNiwiYiIsMSx7ImxhYmVsX3Bvc2l0aW9uIjozMCwiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19LFswLDYwLDYwLDFdXSxbMCw0LCJtIiwxLHsiY29sb3VyIjpbNjAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19LFs2MCw2MCw2MCwxXV0sWzgsMCwieCIsMSx7ImN1cnZlIjoyfV0sWzgsMCwieSIsMSx7ImN1cnZlIjotMn1dLFs0LDYsInBfQiIsMSx7ImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzAsMiwiIiwxLHsic3R5bGUiOnsibmFtZSI6ImNvcm5lciJ9fV0sWzQsNywiIiwxLHsic3R5bGUiOnsibmFtZSI6ImNvcm5lciJ9fV0sWzE3LDMsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMTgsMiwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsxOSwxLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV1d&embed" width="100%" height="300" style="border-radius: 8px; border: none;"></iframe>
+> [!lem]
+> Let $i : \mathsf{Filt}(\A) \to \mathsf{Gr}(\A)$ be the obvious inclusion functor. The left adjoint $m \dashv i$ is the monoficiation functor $m : \mathsf{Gr}(\A) \to \mathsf{Filt}(\A)$, defined as follows using the universal property of image factorings. <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsOCxbMCwwLCJBXzAiXSxbMSwwLCJBXzEiXSxbMiwwLCJBXzIiXSxbMywwLCJcXGNkb3RzIl0sWzAsMSwiQV8wIl0sWzEsMSwiXFxtYXRocm17aW19KGFfMCkiXSxbMiwxLCJcXG1hdGhybXtpbX0oYV8wYV8xKSJdLFszLDEsIlxcY2RvdHMiXSxbMiwxLCJhXzEiLDJdLFsxLDAsImFfMCIsMl0sWzMsMiwiYV8yIiwyXSxbNSw0LCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzcsNiwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNiw0LCIiLDIseyJjdXJ2ZSI6LTMsInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbNiw1LCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs3LDQsIiIsMCx7ImN1cnZlIjotNSwic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dXQ==&embed" width="100%" height="150" style="border-radius: 8px; border: none;"></iframe>
+
+***proof.*** todo
+
+> [!lem]
+> Pushouts in $\mathsf{Filt}(\A)$ are computed as the monofication of the componentwise computation.
+
+***proof.*** Follows from monoficiation function being a left adjoint.
+
+> [!lem]
+> The forgetful functor $-_0 : \mathsf{Filt}(\A) \to \A$ is exact, that is, it preserves finite biproducts, kernels, and cokernels.
+
+***proof.*** obvious.
+
+Note that $-_0$ does not reflect kernels/cokernels. Indeed, the functor
+$$\begin{align*}
+\mathrm{dumb} : \mathsf{Filt}(\A) &\to \mathsf{Filt}(\A)\\
+(A_n)_n &\mapsto (A_0)_n
+\end{align*}$$
+is such that $(\mathrm{dumb} f)_0 = f_0$, but it clearly destroys kernels/cokernels.
+
+Recall that a category is quasi-abelian if the pushout of every kernel is a kernel, and the pullback of every cokernel is a cokernel. I'm hopeful that $\mathsf{Filt}(\A)$ is quasi-abelian.

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Filtrations (Shifted).md",
+                "file": "Emergent Tangles.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Filtrations (Shifted)"
+              "title": "Emergent Tangles"
             }
           }
         ]
@@ -172,15 +172,15 @@
   "active": "94f2a15281968743",
   "lastOpenFiles": [
     "Expansions.md",
-    "Additive Categories.md",
     "Associated Graded.md",
-    "Braids.md",
-    "Emergent Tangles.md",
     "Filtrations.md",
-    "Filtrations (Shifted).md",
+    "Emergent Tangles.md",
     "Fox Derivatives.md",
     "Goldman-Turaev.md",
     "Strict morphisms.md",
+    "Braids.md",
+    "Additive Categories.md",
+    "Filtrations (Shifted).md",
     "bottomTangles.pdf",
     "Pasted image 20260416092453.png",
     "Pasted image 20260415100556.png",
