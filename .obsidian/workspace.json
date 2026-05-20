@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Emergent Tangles"
             }
+          },
+          {
+            "id": "7808263bb1cbb68f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Expansions.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Expansions"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -169,18 +184,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "94f2a15281968743",
+  "active": "7808263bb1cbb68f",
   "lastOpenFiles": [
-    "Expansions.md",
-    "Associated Graded.md",
     "Filtrations.md",
+    "Filtrations (Shifted).md",
+    "Associated Graded.md",
+    "Braids.md",
     "Emergent Tangles.md",
+    "Expansions.md",
+    "Additive Categories.md",
+    "Snakey Lemmas.md",
+    "Strict morphisms.md",
     "Fox Derivatives.md",
     "Goldman-Turaev.md",
-    "Strict morphisms.md",
-    "Braids.md",
-    "Additive Categories.md",
-    "Filtrations (Shifted).md",
     "bottomTangles.pdf",
     "Pasted image 20260416092453.png",
     "Pasted image 20260415100556.png",
