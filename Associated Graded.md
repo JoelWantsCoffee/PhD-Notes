@@ -46,3 +46,5 @@ $$
 > There is a natural iso $\eta : \gr \sigma \cong \sigma \gr$, where $\sigma$ is the shift morphism. Moreover, $\eta\circ \gr i = i_\gr \circ \eta$, where $i : 1 \to \sigma$ is the inclusion.
 
 ***Lemma.*** $\gr$ is additive.
+
+***Lemma.*** Suppose $f$ is a strict epi. Then $\gr f$ is an epi.

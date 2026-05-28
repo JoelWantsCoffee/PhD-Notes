@@ -7,6 +7,9 @@ An additive category is called preabelian if it has all kernels and cokernels.
 
 A morphism of an preabelian category is called strict if its image and coimage are isomorphic.
 
+> [!def] Strict
+> A morphism $f : A \to B$ of a preabelian category is strict if $\mathrm{im} f \cong \mathrm{coim} f$
+
 ***Lemma.*** For every morphism $f$ of a preab cat.
 1. $\mathrm{ker}f$ is monic and strict.
 2. $\mathrm{coker}f$ is epic and strict.
@@ -33,4 +36,17 @@ f'\circ 0 &= \lambda\circ f\\
 
 This is really an example of the connecting morphism of the snake lemma. More generally:
 
-***Lemma.*** Suppose $\def\A{\mathscr{A}}\A$ is an quasi-abelian category. Given a morphism $(\alpha,\beta,\gamma)$ of strict short exact sequences (wherein each morphism component is strict), we obtain a connecting morphism, $\delta : \ker \gamma \to \operatorname{cok}\alpha$. Moreover, we obtain the following long exact sequence.$$\ker\alpha \to \ker \beta \to \ker \gamma \xrightarrow\delta \operatorname{cok}\alpha \to \operatorname{cok}\beta \to \operatorname{cok}\gamma$$***proof.*** See [this paper](https://doi.org/10.1007/BF02674106)
+***Lemma.*** Suppose $\A$ is an quasi-abelian category. Given a morphism $(\alpha,\beta,\gamma)$ of strict short exact sequences (wherein each morphism component is strict), we obtain a connecting morphism, $\delta : \ker \gamma \to \operatorname{cok}\alpha$. Moreover, we obtain the following long exact sequence.$$\ker\alpha \to \ker \beta \to \ker \gamma \xrightarrow\delta \operatorname{cok}\alpha \to \operatorname{cok}\beta \to \operatorname{cok}\gamma$$***proof.*** See [this paper](https://doi.org/10.1007/BF02674106)
+
+***Lemma.*** Suppose $\A$ is an quasi-abelian category, in which the top row of the following diagram is a strict exact sequence and $f$ is a morphism. If the pushout square exists, then the following extension is a strict exact sequence.
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTAsWzEsMCwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFs1LDAsIlxcYnVsbGV0Il0sWzYsMCwiMCJdLFswLDAsIjAiXSxbMSwyLCJcXGJ1bGxldCJdLFswLDIsIjAiXSxbMywyLCJcXGJ1bGxldCJdLFs1LDIsIlxcYnVsbGV0Il0sWzYsMiwiMCJdLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMiwzXSxbNCwwXSxbMCw1LCJmIiwyXSxbNSw3LCJtIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsxLDddLFs3LDAsIiIsMix7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXItaW52ZXJzZSJ9fV0sWzgsOV0sWzEsMiwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzYsNV0sWzcsOCwiXFxvcGVyYXRvcm5hbWV7Y29rZXJ9IG0iLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMiw4LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=&embed" width="100%" height="200" style="border-radius: 8px; border: none;"></iframe>
+***proof.*** Because $\A$ is quasi-abelian, $m$ inherits strictness from the morphism above it. Every cokernel is strict. Because $m$ is strict, $\ker \operatorname{coker} m = m$. Done.
+
+***Lemma.*** Suppose $\bullet \xrightarrow{(0,\lambda,0)} \bullet \xrightarrow{(\alpha,\beta,\gamma)} \bullet$ is a diagram of strict exact sequences in a preabelian category. Then $\eta_{\beta\lambda} = \alpha \eta_\lambda$.
+***proof.*** Indeed,
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTMsWzEsMCwiXFxidWxsZXQiXSxbMiwwLCJcXGJ1bGxldCJdLFszLDAsIlxcYnVsbGV0Il0sWzQsMCwiMCJdLFsxLDEsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMywxLCJcXGJ1bGxldCJdLFswLDEsIjAiXSxbNCwxLCIwIl0sWzEsMiwiXFxidWxsZXQiXSxbMiwyLCJcXGJ1bGxldCJdLFszLDIsIlxcYnVsbGV0Il0sWzAsMiwiMCJdLFsyLDNdLFsxLDUsIlxcbGFtYmRhIiwwLHsiY29sb3VyIjpbMzAsNjAsNjBdfSxbMzAsNjAsNjAsMV1dLFswLDQsIjAiLDJdLFswLDFdLFsxLDIsImUiLDAseyJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fSxbMCw2MCw2MCwxXV0sWzQsNSwibSciLDEseyJjb2xvdXIiOls2MCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19LFs2MCw2MCw2MCwxXV0sWzUsNl0sWzIsNCwiXFxldGFfXFxsYW1iZGEiLDEseyJsYWJlbF9wb3NpdGlvbiI6NzAsImNvbG91ciI6WzYwLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbNjAsNjAsNjAsMV1dLFsyLDYsIjAiXSxbNyw0XSxbNiw4XSxbNSwxMCwiXFxiZXRhIiwwLHsiY29sb3VyIjpbMzAsNjAsNjBdfSxbMzAsNjAsNjAsMV1dLFs5LDEwLCJtIiwyLHsiY29sb3VyIjpbMCw2MCw2MF0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19LFswLDYwLDYwLDFdXSxbMTAsMTFdLFsxMiw5XSxbNCw5LCJcXGFscGhhIiwyLHsiY29sb3VyIjpbMTIwLDYwLDYwXX0sWzEyMCw2MCw2MCwxXV0sWzYsMTEsIlxcZ2FtbWEiXSxbMiw5LCJcXGV0YV97XFxiZXRhXFxsYW1iZGF9IiwxLHsibGFiZWxfcG9zaXRpb24iOjgwLCJjb2xvdXIiOlswLDYwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbMCw2MCw2MCwxXV1d&embed" width="100%" height="250" style="border-radius: 8px; border: none;"></iframe>
+That is, we have $$\begin{align*}
+m\eta_{\beta\lambda}e &= \beta\lambda\\
+&= \beta m'\eta_{\lambda}e\\
+&= m\alpha\eta_{\lambda}e
+\end{align*}$$Cancelling the epi and mono, we have our result.
