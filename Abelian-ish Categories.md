@@ -50,3 +50,9 @@ m\eta_{\beta\lambda}e &= \beta\lambda\\
 &= \beta m'\eta_{\lambda}e\\
 &= m\alpha\eta_{\lambda}e
 \end{align*}$$Cancelling the epi and mono, we have our result.
+
+> [!def]
+> Suppose $x,y : X,Y \hookrightarrow A$ are subobjects in a preabelian category. The union of subobjects $x\cup y$ is define as the image component of the sequence $X\oplus Y \xtwoheadrightarrow{\operatorname{coim}[x,y]} \bullet \to \bullet  \xhookrightarrow{\operatorname{im}[x,y]} A$. 
+
+***Lemma.*** Cokernels commute in the sense of the following diagram.
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsOSxbMSwxLCJBIl0sWzEsMCwiWCJdLFswLDEsIlkiXSxbMCwwLCJYIFxcY3VwIFkiXSxbMiwyLCJcXG9wZXJhdG9ybmFtZXtjb2tlcn0oeFxcY3VwIHkpIl0sWzEsMiwiXFxvcGVyYXRvcm5hbWV7Y29rZXJ9KHgpIl0sWzIsMywiXFxvcGVyYXRvcm5hbWV7Y29rZXJ9KGNfeHkpIl0sWzIsMSwiXFxvcGVyYXRvcm5hbWV7Y29rZXJ9KHkpIl0sWzMsMiwiXFxvcGVyYXRvcm5hbWV7Y29rZXJ9KGNfeXgpIl0sWzEsMCwieCIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMiwwLCJ5IiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFszLDAsInhcXGN1cCB5IiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsyLDMsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMSwzLCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzAsNCwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzAsNSwiY194IiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsNV0sWzUsNiwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzQsNiwiIiwxLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCw3LCJjX3kiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMSw3XSxbNyw4LCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNCw4LCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==&embed" width="100%" height="250" style="border-radius: 8px; border: none;"></iframe>

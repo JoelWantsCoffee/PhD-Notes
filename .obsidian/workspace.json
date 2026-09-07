@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "a29606759edaf397",
+        "id": "3a22f2148fee44d3",
         "type": "tabs",
         "children": [
           {
-            "id": "c3705c35cefdec22",
+            "id": "e2763196dbdf1e43",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Braids.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Braids"
+              "title": "New tab"
             }
           }
         ]
@@ -41,7 +37,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -169,18 +167,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c3705c35cefdec22",
+  "active": "e2763196dbdf1e43",
   "lastOpenFiles": [
-    "Abelian-ish Categories.md",
+    "Expansions.md",
+    "PROP Expansions.md",
     "Associated Graded.md",
+    "GRPF.md",
+    "GRPS.md",
+    "Filtrations.md",
+    "Quantum Topology Talk.md",
+    "Abelian-ish Categories.md",
     "Braids.md",
+    "Emergent Tangles.md",
+    "Chord Diagrams.md",
+    "Filtrations (Shifted).md",
     "Fox Derivatives.md",
     "Goldman-Turaev.md",
-    "Expansions.md",
-    "Filtrations (Shifted).md",
-    "Emergent Tangles.md",
-    "Filtrations.md",
-    "Chord Diagrams.md",
+    "Lax Counital Comagmas.md",
+    "Lie Theory.md",
     "temp.md",
     "Strict morphisms.md",
     "Snakey Lemmas.md",

@@ -1,0 +1,32 @@
+Define a category $\mathrm{SGrp}$ of groups with chosen subgroups as follows. For objects, pairs $(G,\,N)$ where $N \hookrightarrow G$. For morphisms $(G,N) \to (H,M)$ pairs $f : G \to H$ and $g : N \to M$ such that the following diagram commutes.
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwxLCJHIl0sWzAsMCwiTiJdLFsxLDAsIk0iXSxbMSwxLCJIIl0sWzEsMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsyLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMSwyLCJmIl0sWzAsMywiZyIsMl1d&embed" width="100%" height="200" style="border-radius: 8px; border: none;"></iframe>
+Now, in $\mathrm{SGrp}$ pullbacks are computed as follows.
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsOCxbMiwzLCJHIl0sWzMsMiwiTl9HIl0sWzEsMiwiTl9IIl0sWzAsMywiSCJdLFsyLDEsIksiXSxbMCwxLCJcXGJ1bGxldCJdLFszLDAsIk5fSyJdLFsxLDAsIlxcYnVsbGV0Il0sWzEsMCwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsyLDMsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbNCwwXSxbMywwXSxbNSwzXSxbNSw0XSxbNSwwLCIiLDEseyJzdHlsZSI6eyJuYW1lIjoiY29ybmVyIn19XSxbMiwxXSxbNiwxXSxbNiw0LCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzcsMl0sWzcsNl0sWzcsMSwiIiwxLHsic3R5bGUiOnsibmFtZSI6ImNvcm5lciJ9fV0sWzcsNSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d&embed" width="100%" height="200" style="border-radius: 8px; border: none;"></iframe>
+the induced arrow is a monomorphism by a joint-monicity argument. Define a functor
+$$
+\begin{align*}
+\mathrm{SGrp} &\to \mathrm{Fil}_R\\
+(G,N) &\mapsto R[G] \hookleftarrow \mathrm{Aug}(R[N]) \hookleftarrow \mathrm{Aug}(R[N])^2 \hookleftarrow \cdots
+\end{align*}
+$$
+Now, $R[G]$ is obviously equipped with a (cocomm.) hopf algebra structure. Moreover, this hopf algebra structure lifts to the whole filtration, producing a functor $\mathrm{SGrp} \to \mathrm{Fil}_R^\mathsf{Hopf}$
+
+Call a group morphism $f : G \to H$ normal if the short exact sequence
+$$\ker f \hookrightarrow G \twoheadrightarrow \mathrm{im} f$$
+splits and remains (split) exact after abelianisation. 
+
+***lemma.*** Suppose $(f,f_N) : (G,N_G) \to (H, N_H)$ with $f_N$ normal. Then $$R[G,N_G] \cong R[\ker f, \ker f_N] \otimes R[\operatorname{im}f,\operatorname{im}f_N]$$ in $\mathrm{Fil}_R^\mathsf{coCAlg}$ such that $R[f,f_N] \cong \varepsilon \otimes 1$.
+
+***proof.*** On the face of it we have a set isomorphism $\ker f \times \operatorname{im} f \cong G$, which extends to a coalgebra isomorphism $R[\ker f] \otimes R[\operatorname{im} f] \cong R[G]$. It remains to check the isomorphism respects filtrations. Now, consider the split short exact sequence:
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMyxbMCwwLCIoXFxrZXIgZl9OKV9cXG1hdGhybXthYn0iXSxbMSwwLCIoTl9HKV9cXG1hdGhybXthYn0iXSxbMiwwLCIoXFxvcGVyYXRvcm5hbWV7aW19IGZfTilfXFxtYXRocm17YWJ9Il0sWzAsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsxLDIsIiIsMCx7ImN1cnZlIjotMiwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzIsMSwic19cXG1hdGhybXthYn0iLDAseyJjdXJ2ZSI6LTIsInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XV0=&embed" width="100%" height="120" style="border-radius: 8px; border: none;"></iframe>
+We need to show that $$\langle g - 1 \,|\, g\in N_G \rangle^n = \sum_{p+q=n} \langle k - 1 \,|\, k\in \ker f_N \rangle^p \langle s(i) - 1 \,|\, i\in \operatorname{im}f_N \rangle^q$$this follows from the fact that $\langle s \operatorname{im} f_N \rangle\langle \ker f_N \rangle \subseteq \langle \ker f_N \rangle \langle s\operatorname{im} f_N \rangle + \langle \ker f_N \rangle^2$.
+
+***lemma.*** Pullbacks preserve normality.
+***proof.*** First, observe that a splitting is induced:
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTAsWzMsMSwiTiJdLFszLDIsIk0iXSxbMiwyLCJHIl0sWzIsMSwiUCJdLFs0LDMsIlxcbWF0aHJte2NvaW19IGYiXSxbMSwzLCJcXG1hdGhybXtjb2ltfSBwIl0sWzMsMCwiXFxrZXIgZiJdLFsyLDAsIlxca2VyIHAiXSxbMCwxLCJpPXBzJz1pY3MnIl0sWzAsMiwiMT1jcyciXSxbMCwxLCJmIiwxXSxbMiwxLCJnIl0sWzMsMiwicCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFszLDAsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFszLDEsIiIsMSx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXIifX1dLFswLDQsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs0LDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMyw1LCJjIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzUsMiwiaSIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbNiwwXSxbNywzXSxbNyw2LCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSwzLCJzJyIsMCx7Im9mZnNldCI6LTMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDQsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDAsInMiLDEseyJvZmZzZXQiOjMsImN1cnZlIjo0fV1d&embed" width="100%" height="250" style="border-radius: 8px; border: none;"></iframe>
+And:
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMTAsWzIsMSwiTl9cXG1hdGhybXthYn0iXSxbMiwyLCJNX1xcbWF0aHJte2FifSJdLFsxLDIsIkdfXFxtYXRocm17YWJ9Il0sWzEsMSwiUF9cXG1hdGhybXthYn0iXSxbMywyLCJcXG9wZXJhdG9ybmFtZXtjb2t9IGtfXFxtYXRocm17YWJ9Il0sWzAsMiwiXFxvcGVyYXRvcm5hbWV7Y29rfSBrJ19cXG1hdGhybXthYn0iXSxbMiwwLCIoXFxrZXIgZilfXFxtYXRocm17YWJ9Il0sWzEsMCwiKFxca2VyIHApX1xcbWF0aHJte2FifSJdLFszLDAsImsgPSB1aydcXDsgXFx0ZXh0e21vbm99Il0sWzMsMSwiXFxpbXBsaWVzIGsnXFw7IFxcdGV4dHttb25vfSJdLFswLDEsImZfXFxtYXRocm17YWJ9IiwxXSxbMiwxLCJnX1xcbWF0aHJte2FifSIsMl0sWzMsMiwicF9cXG1hdGhybXthYn0iLDFdLFszLDAsInUiXSxbMCw0LCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMyw1LCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNiwwLCJrIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFs3LDMsImsnIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFs3LDYsIiIsMSx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d&embed" width="100%" height="250" style="border-radius: 8px; border: none;"></iframe>
+***Theorem***. Suppose $(f,f_N) : (G, N_G) \to (H, N_H)$ is a strict epimorphism with $f_N$ normal. Then pullbacks of $(f,f_N)$ are preserved by $R[-] : \mathrm{SGrp} \to \mathrm{Fil}_R^\mathsf{cocHopf}$ and $\mathrm{gr}^\mathsf{cocHopf} \circ R[-]$.
+
+
+***Theorem***. Suppose $(G, N_G) \xrightarrow{(f,f_N)} (H, N_H) \xrightarrow{(g,g_N)} (K, N_K)$ is a strict exact, with $f_N$ and $g_N$ normal. Then this strict exactness is preserved by $R[-] : \mathrm{SGrp} \to \mathrm{Fil}_R^\mathsf{cocHopf}$ and $\mathrm{gr}^\mathsf{cocHopf} \circ R[-]$.

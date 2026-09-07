@@ -39,3 +39,12 @@ $$
 > <iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNixbMCwwLCJcXG1hdGhiYntDfVxccGkiXSxbMiwwLCJ8XFxtYXRoYmJ7Q31cXHBpfCBcXG90aW1lcyBcXG1hdGhiYntDfVxccGkiXSxbNCwwLCJ8XFxtYXRoYmJ7Q31cXHBpfCBcXG90aW1lcyB8XFxtYXRoYmJ7Q31cXHBpfCJdLFs0LDEsInxcXG1hdGhiYntDfVxccGl8IFxcbGFuZCB8XFxtYXRoYmJ7Q31cXHBpfCJdLFswLDIsInxcXG1hdGhiYntDfVxccGl8Il0sWzQsMiwifFxcbWF0aGJie0N9XFxwaXwgXFxvdGltZXMgfFxcbWF0aGJie0N9XFxwaXwiXSxbMCwxLCJwK1xcY2hpIl0sWzEsMiwiMSBcXG90aW1lcyB8XFxjZG90fCJdLFsyLDMsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFswLDQsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs0LDUsIlxcZGVsdGEiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw1LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV1d&embed" width="100%" height="200" style="border-radius: 8px; border: none;"></iframe>
 > is a lie cobracket.
 
+Suppose $g_1g_2\cdots g_k$ is word in $\mathrm{B}_{p,1}$. We describe an explicit choice of representative immersion $\gamma : S^1 \to \mathbb{C}^{\times p} = \mathbb{C} \setminus \{-1, -2, \cdots, -p\}$.
+
+Let $G = \{\tau_1^{\pm 1},\,\tau_2^{\pm 1},\,\ldots,\,\tau_p^{\pm 1}\}$ be the set of generators of $\mathrm{B_{p,1}}$. We define a series of map
+$$E_n : G \longrightarrow \mathrm{Imm}\Big((I,0,1),\,( \mathbb{C}^{\times p},\, -ni,\, -(n+1)i)\Big)$$
+as follows. Then, $\gamma = sE_1(g_1)E_2(g_2)\cdots E_k(g_k)e_n$. It follows that $\lambda_2(\gamma)$.
+
+<iframe src="https://www.desmos.com/calculator/iufojbw3lw?embed" width="100%" height="300"></iframe>
+
+This choice of representative has two key properties. It's maximum along the x-axis is 1, and it has rotation number zero.
